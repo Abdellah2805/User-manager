@@ -1,0 +1,351 @@
+/* Variables de couleurs */
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg-color: #2e2e42;
+    --text-color: #f0f0f0;
+    --primary-color: #3498db;
+    --delete-color: #e74c3c;
+    --admin-badge-color: #3498db;
+    --user-badge-color: #95a5a6;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de l'en-tête du tableau de bord */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-subtitle {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #a0a0b2;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: #a0a0b2;
+}
+
+.user-name {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Styles du corps du tableau de bord */
+.dashboard-main {
+    padding: 2rem 3rem;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-content p {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-content small {
+    font-size: 0.8rem;
+    color: #a0a0b2;
+}
+
+.user-management {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.user-management h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.management-subtitle {
+    color: #a0a0b2;
+    margin-bottom: 2rem;
+}
+
+/* Styles du tableau */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+table thead th {
+    font-weight: 500;
+    text-align: left;
+    color: #a0a0b2;
+    padding: 1rem 0;
+}
+
+table tbody tr {
+    background-color: #232334;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: #34344a;
+}
+
+table td {
+    padding: 1rem;
+    font-size: 0.95rem;
+}
+
+.user-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info-cell i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-admin {
+    background-color: var(--admin-badge-color);
+    color: white;
+}
+
+.badge-user {
+    background-color: var(--user-badge-color);
+    color: white;
+}
+
+.action-buttons {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 0.5rem;
+}
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--delete-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #ff6b6b;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #e74c3c22;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* Styles pour la page de connexion */
+.login-container {
+    background: #232334;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.login-header h2 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.login-header p {
+    color: #a0a0b2;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group label i {
+    margin-right: 0.5rem;
+    color: #a0a0b2;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #1a1a2e;
+    border: 1px solid #4a4a6e;
+    border-radius: 8px;
+    color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+.login-btn i {
+    margin-right: 0.5rem;
+}
+
+.demo-info {
+    margin-top: 2rem;
+    background-color: #2e2e42;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.demo-info p {
+    margin: 0.5rem 0;
+    color: #a0a0b2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard-header,
+    .dashboard-main {
+        padding: 1rem;
+    }
+
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+}
