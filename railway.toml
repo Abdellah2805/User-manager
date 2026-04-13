@@ -1,6 +1,7 @@
 [build]
+command = "cd user-manager/backend && npm install"
 
 [deploy]
-startCommand = "cd user-manager/backend && node server.js"
+startCommand = "node user-manager/backend/server.js"
 healthcheckPath = "/health"
 healthcheckTimeout = 30
