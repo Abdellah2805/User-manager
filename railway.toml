@@ -1,8 +1,8 @@
 [build]
-builder = "NIXPACKS"
+command = "npm run install-deps"
 
 [deploy]
-startCommand = "node backend/server.js"
+startCommand = "npm start"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
