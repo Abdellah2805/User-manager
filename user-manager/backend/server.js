@@ -24,8 +24,8 @@ app.get('/dashboard.html', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dashboard.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Serveur en écoute sur le port ${PORT}`);
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 });
 
 // Démarrage du serveur

@@ -1,8 +1,6 @@
 [build]
-command = "npm run install-deps"
+command = "cd user-manager/backend && npm install"
 
 [deploy]
-startCommand = "npm start"
-healthcheckPath = "/"
-healthcheckTimeout = 300
-restartPolicyType = "ON_FAILURE"
+startCommand = "cd user-manager/backend && node server.js"
+healthcheckPath = "/health"

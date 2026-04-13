@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "user-manager/backend/server.js",
   "scripts": {
-    "start": "node user-manager/backend/server.js",
-    "install-deps": "cd user-manager/backend && npm install"
-  },
-  "dependencies": {}
+    "start": "node user-manager/backend/server.js"
+  }
 }
