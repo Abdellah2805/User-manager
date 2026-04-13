@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "user-manager/backend/server.js",
   "scripts": {
-    "start": "node user-manager/backend/server.js"
+    "start": "node user-manager/backend/server.js",
+    "prepare": "husky"
   }
 }

@@ -1,6 +1,6 @@
 # Projet User-Manager
 
-## Description
+## Descriptions
 
 Ce projet est une application web complète (full-stack) conçue pour la gestion des utilisateurs. Elle est composée d'un système d'authentification robuste (inscription et connexion) et d'un tableau de bord d'administration qui permet de visualiser et de gérer une liste d'utilisateurs.
 
